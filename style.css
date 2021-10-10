@@ -25,7 +25,7 @@ img {
   box-shadow: 0px 20px 30px  rgba(0, 0, 0, 0.3);
 }
 .article-footer-inner-section {
-  width: 500px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 30px;;
 }
@@ -109,9 +109,11 @@ img {
   justify-content: space-between;
   align-items: center;
   margin: 30px 0;
+  flex-wrap: wrap;
 }
 .social-icons-left {
   display: flex;
+  margin-bottom: 1rem;
 }
 .social-icons-left button {
   display: flex;
@@ -141,6 +143,7 @@ img {
   background: transparent;
   border-radius: 40px;
   padding: 10px;
+  margin-right: .5rem;
 }
 .social-icons-right button img {
   width: 20px;
