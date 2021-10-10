@@ -9,12 +9,18 @@ const lastIconRight = document.getElementById("more");
 //Creo elemento div con interno input
 function createInput() {
   const inputContainer = document.createElement("div");
+  inputContainer.setAttribute('class', 'inputContainer')
   const inputField = document.createElement("input");
-  //INPUT CONTAINER
-  inputContainer.setAttribute("class", "inputContainer");
+  const submitButton = document.createElement('button')
+
+  submitButton.setAttribute('type', 'submit')
+  submitButton.setAttribute('class', 'btn-form')
+  submitButton.innerHTML = '&rArr;'
+  inputContainer.appendChild(submitButton)
+
   inputField.setAttribute("class", "input-field");
   inputField.setAttribute("placeholder", "Type your Email");
-  inputField.setAttribute("type", "text");
+  inputField.setAttribute("type", "email");
 
   inputContainer.appendChild(inputField);
   emailButton.after(inputContainer);
@@ -22,19 +28,4 @@ function createInput() {
 
 emailButton.onclick = function () {
   createInput();
-};
-
-function createSmallPopUp() {
-  const smallContainer = document.createElement("div");
-  smallContainer.setAttribute("class", "small-container");
-  const text = document.createElement("p");
-  text.innerHTML = "Work in progress...";
-
-  smallContainer.appendChild(text);
-  lastIconRight.after(smallContainer);
-  
-}
-//Icona puntini small pop up
-lastIconRight.onclick = function () {
-  createSmallPopUp()
 };
