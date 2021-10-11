@@ -87,6 +87,11 @@ img {
   font-weight: 600;
   font-size: 15px;
 }
+.errormsg{
+  color: red;
+  font-size: 12px;
+  text-align: right;
+}
 
 
 /* Rest of code */
